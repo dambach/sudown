@@ -3,7 +3,7 @@ name: Submit your thesis!
 about: Link to your thesis you built using {sudown} or another forked version
 title: Thesis by ...
 labels: ''
-assignees: ismayc
+assignees: dambach
 
 ---
 

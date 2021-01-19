@@ -53,12 +53,12 @@ if (!require(bookdown)) {
 }
 if (!require(sudown)) {
   if (params$`Install needed packages for {sudown}`) {
-    remotes::install_github("ismayc/sudown")
+    remotes::install_github("dambach/sudown")
   } else {
     stop(
       paste(
         "You need to run",
-        'remotes::install_github("ismayc/sudown")',
+        'remotes::install_github("dambach/sudown")',
         "first in the Console."
       )
     )
@@ -138,7 +138,7 @@ ggplot(mean_delay_by_carrier, aes(x = carrier, y = mean_dep_delay)) +
 
 Here is a reference to this image: Figure \@ref(fig:delaysboxplot).
 
-A table linking these carrier codes to airline names is available at <https://github.com/ismayc/pnwflights14/blob/master/data/airlines.csv>.
+A table linking these carrier codes to airline names is available at <https://github.com/dambach/pnwflights14/blob/master/data/airlines.csv>.
 
 \clearpage
 

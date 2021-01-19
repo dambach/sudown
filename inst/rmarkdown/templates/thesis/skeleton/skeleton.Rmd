@@ -78,12 +78,12 @@ if (!require(remotes)) {
 }
 if (!require(sudown)) {
   if (params$`Install needed packages for {sudown}`) {
-    remotes::install_github("ismayc/sudown")
+    remotes::install_github("dambach/sudown")
   } else {
     stop(
       paste(
         "You need to run",
-        'remotes::install_github("ismayc/sudown")',
+        'remotes::install_github("dambach/sudown")',
         "first in the Console."
       )
     )
