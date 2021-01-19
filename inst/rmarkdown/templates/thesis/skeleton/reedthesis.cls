@@ -310,7 +310,7 @@
   \newpage
 % added by DB
   \vspace{-10mm} % à ajuster en fonction de la hauteur du logo
-  \flushleft \includegraphics[scale=0.3]{logo-SU.png} 
+  \flushleft \includegraphics[scale=0.3]{images/logo-SU.png} 
   \centering
   \vspace{25mm} % à régler éventuellement
   \color{black}
