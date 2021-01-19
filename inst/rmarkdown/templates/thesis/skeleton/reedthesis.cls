@@ -351,7 +351,7 @@
   Titre, Affiliation  &   \\ 
   \end{tabular} 
   \vspace{1cm}
-  \centering \includegraphics[scale=1.2]{creatComm.png} 
+  \centering \includegraphics[scale=1.2]{images/creatComm.png} 
 
   \end{titlepage}
 
