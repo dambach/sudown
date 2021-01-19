@@ -1,6 +1,6 @@
 ---
 name: Submit your thesis!
-about: Link to your thesis you built using {thesisdown} or another forked version
+about: Link to your thesis you built using {sudown} or another forked version
 title: Thesis by ...
 labels: ''
 assignees: ismayc
@@ -27,6 +27,6 @@ assignees: ismayc
 
 <!-- In 10 sentences or less, explain your work. Ideally, this should help the layperson understand what you did as much as possible. -->
 
-# What did you like about using {thesisdown} for this work?
+# What did you like about using {sudown} for this work?
 
 <!-- Add any comments you have here. What worked well? What tweaks might have made it easier to work with. -->
