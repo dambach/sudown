@@ -48,6 +48,26 @@
   \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
   \newcommand{\euro}{€}
 \fi
+
+% added by DB
+\usepackage[T1]{fontenc}
+\usepackage{amsfonts}
+\usepackage{fancyhdr}
+\usepackage{amssymb}
+\usepackage{xcolor} % ou xcolor selon l'installation
+%\definecolor{Prune}{RGB}{99,0,60}
+\usepackage{mdframed}
+\usepackage{multicol} %% Pour mettre un texte sur plusieurs colonnes
+\usepackage{scrextend} %Forcer la 4eme  de couverture en page pair
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage[absolute]{textpos} 
+\usepackage{colortbl}
+\usepackage{array}
+\usepackage{geometry}
+% End DB addition
+
+
 % use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
@@ -288,43 +308,92 @@
   \fontsize{12}{14}\selectfont
   \begin{titlepage}
   \newpage
-  \let\footnotesize\small
-  \let\footnoterule\relax
-  \let \footnote \thanks
+% added by DB
+  \vspace{-10mm} % à ajuster en fonction de la hauteur du logo
+  \flushleft \includegraphics[scale=0.3]{logo-SU.png} 
+  \centering
+  \vspace{25mm} % à régler éventuellement
+  \color{black}
+  \fontfamily{fvs}\fontseries{m}\fontsize{22}{26}\selectfont
+  \large{Sorbonne Université - Médecine} 
+  \vspace{1.5cm}
+  \large\textbf{Titre de la thèse (sur plusieurs lignes si nécessaire, 4 voire 5)} 
+  \vspace{1.5cm}
+  {Par}
+  \Large {\color{black} \textbf{Damien BACHASSON}}
+  \normalsize
+  \vspace{1.5cm}
+  \color{black}
+  \textbf{Habilitation à diriger des recherches (HDR) }
+  \vspace{15mm}
+  \footnotesize{Manuscrit soumis le XX XXXX XXXX. Évalué et approuvé par le jury le XX XXXX XXXX. HDR présentée et soutenue publiquement le XX XXXX XXXX}\\
+  \bigskip
+  \vspace{\fill} % ALIGNER LE TABLEAU EN BAS DE PAGE
+  \flushleft \small \textbf{Devant un jury composé de:}
+  \bigskip
+  \scriptsize
+  \begin{tabular}{|p{8cm}l}
+  \arrayrulecolor{red}
+  \textbf{Prénom Nom} &  Rapportrice \\ 
+  Titre, Affiliation   &   \\ 
+  \textbf{Prénom Nom} &  Rapporteur \\ 
+  Titre, Affiliation  &   \\ 
+  \textbf{Prénom Nom} &  Examinatrice \\ 
+  Titre, Affiliation   &   \\ 
+  \textbf{Prénom Nom} &  Examinateur \\ 
+  Titre, Affiliation   &   \\ 
+  \textbf{Prénom Nom} &  Examinateur \\ 
+  Titre, Affiliation   &   \\ 
+  \end{tabular} 
+  \medskip
+  \begin{tabular}{|p{8cm}l}\arrayrulecolor{white}
+  \textbf{Prénom Nom} &  Invité \\ 
+  Titre, Affiliation  &   \\ 
+  \end{tabular} 
+  \vspace{1cm}
+  \centering \includegraphics[scale=1.2]{creatComm.png} 
 
-  \baselineskip = 1.4\baselineskip
-  \setbox0=\hbox{of the Requirements for the Degree}
-
-  \begin{center}
-    \setcounter{page}{1}
-    \null\vfil
-    {\fontsize{12}{14}\selectfont \@title}
-    \vfil
-    \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
-    \vfil
-    A Thesis \\
-    Presented to \\
-    \@thedivisionof \ \@division \\
-    \@institution
-    \vfil
-    \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
-    \vfil
-    In Partial Fulfillment \\
-    of the Requirements for the Degree \\
-    \@degree
-    \vfil
-    \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
-    \bigskip
-    \centerline{}
-    \bigskip
-    {\fontsize{12}{14}\selectfont \lineskip .75em
-    \begin{tabular}[t]{c}%
-      \@author
-    \end{tabular}\par}
-    \vskip 1.5em
-    {\fontsize{12}{14}\selectfont \@date \par}
-  \end{center}\par
   \end{titlepage}
+
+
+% lines commented by DB
+  % \let\footnotesize\small
+  % \let\footnoterule\relax
+  % \let \footnote \thanks
+
+  % \baselineskip = 1.4\baselineskip
+  % \setbox0=\hbox{of the Requirements for the Degree}
+
+  % \begin{center}
+  %   \setcounter{page}{1}
+  %   \null\vfil
+  %   {\fontsize{12}{14}\selectfont \@title}
+  %   \vfil
+  %   \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
+  %   \vfil
+  %   A Thesis \\
+  %   Presented to \\
+  %   \@thedivisionof \ \@division \\
+  %   \@institution
+  %   \vfil
+  %   \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
+  %   \vfil
+  %   In Partial Fulfillment \\
+  %   of the Requirements for the Degree \\
+  %   \@degree
+  %   \vfil
+  %   \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
+  %   \bigskip
+  %   \centerline{}
+  %   \bigskip
+  %   {\fontsize{12}{14}\selectfont \lineskip .75em
+  %   \begin{tabular}[t]{c}%
+  %     \@author
+  %   \end{tabular}\par}
+  %   \vskip 1.5em
+  %   {\fontsize{12}{14}\selectfont \@date \par}
+  % \end{center}\par
+  % \end{titlepage}
 
 %% Approved for the division page
   \cleardoublepage
